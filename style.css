@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Mulish", sans-serif;
+}
+
+
+.line{
+    width: 45%;
+    background-color: rgba(154, 166, 178, .7);
+    height: 1px;
+}
+.col-left{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('img/main-img.png');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none !important;
+}
+a:hover{
+    text-decoration: underline !important;
+
+}
+.col-right {
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.col-right img{
+    width: 150px;
+    height: 150px;
+}
+
+.fa-google{
+    color: #ea4335;
+}
+.fa-facebook{
+    color: #1877f2;
+}
+.btn-login-with{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 3rem !important;
+    transition: all .8s;
+    border: 2px solid #333 !important;
+
+}
+.btn-login-with:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -2;
+    border-radius: 3rem;
+}
+.btn-login-with::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(154, 166, 178, .5) !important;
+    border-radius: 3rem;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.btn-login-with:hover::before{
+    width: 100%;
+}
+@media(max-width:992px){
+    .col-right{
+        margin: 0;
+        padding-top: 0;
+    }
+    .col-right img{
+        width: 120px !important;
+        height: 120px !important;
+    }
+    .col-right .container{
+        width: 100% !important;
+
+    }
+}
+
